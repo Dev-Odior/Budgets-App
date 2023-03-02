@@ -1,21 +1,8 @@
 import React, { createContext, useEffect, useReducer, useState } from 'react'
 import { reducer } from '../reducer'
 
-const getLocalStorage = () => {
-  let list = localStorage.getItem('list')
-
-  if (list) {
-    return JSON.parse(localStorage.getItem('list'))
-  } else {
-    list = []
-  }
-}
-
-const item = getLocalStorage()
-console.log(item, 'items thingy')
-
 const defaultThing = {
-  items: item,
+  items: [],
   formValues: { text: '', amount: '' },
   modalText: '',
   modalStatus: false,
