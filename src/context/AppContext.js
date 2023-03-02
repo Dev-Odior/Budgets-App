@@ -11,8 +11,11 @@ const getLocalStorage = () => {
   }
 }
 
+const item = getLocalStorage()
+console.log(item, 'items thingy')
+
 const defaultThing = {
-  items: getLocalStorage(),
+  items: item,
   formValues: { text: '', amount: '' },
   modalText: '',
   modalStatus: false,
